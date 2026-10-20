@@ -71,7 +71,7 @@ const portfolioConfig = {
   
   about: {
     intro: "I'm a B.Sc Computer Science student with a deep interest in Artificial Intelligence and Data Science. I focus on studying neural network architectures, data modeling techniques, and backend script automation to turn ideas into intelligent systems.",
-    education: "Pursuing B.Sc Computer Science at KG College of Arts and Science. Completed primary and secondary schooling at SSVM Vidhya Dhir.",
+    education: "Pursuing B.Sc Computer Science at KG College of Arts and Science. Completed primary and secondary schooling at SSVM Vidhan Matriculation Hr. Sec.school",
     interests: "My technical interests focus on machine learning algorithms, database optimization, responsive client web design, and smart home automation using IoT microcontrollers (ESP32).",
     // Clean credentials rendered dynamically in the introduction
     credentials: [
