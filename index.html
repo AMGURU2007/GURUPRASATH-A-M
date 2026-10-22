@@ -4,205 +4,157 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="robots" content="index, follow">
-  
-  <!-- SEO Meta Tags -->
   <title>GURUPRASATH A M | AI, Data Science & Software Developer Portfolio</title>
-  <meta name="description" content="Professional portfolio of Guruprasath, a B.Sc Computer Science student specializing in Artificial Intelligence, Data Science, Web Development, and IoT solutions. Explore my projects, skills, and interactive resume.">
+  <meta name="description" content="Professional portfolio of Guruprasath, a B.Sc Computer Science student specializing in Artificial Intelligence, Data Science, Web Development, and IoT solutions.">
   <meta name="keywords" content="Guruprasath, Developer Portfolio, AI Developer, Data Science Student, IoT, Web Development, Python, JavaScript, Machine Learning, ESP32">
   <meta name="author" content="Guruprasath">
   <link rel="canonical" href="https://github.com/AMGURU2007">
-
-  <!-- Open Graph / Facebook -->
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://github.com/AMGURU2007">
   <meta property="og:title" content="Guruprasath | AI, Data Science & Software Developer Portfolio">
   <meta property="og:description" content="Explore the portfolio of Guruprasath: projects, skills, photos, and a custom interactive anti-gravity particle experience.">
   <meta property="og:image" content="images/profile-cutout.png">
-  <meta property="og:site_name" content="Guruprasath Portfolio">
-
-  <!-- Twitter -->
-  <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:url" content="https://github.com/AMGURU2007">
-  <meta name="twitter:title" content="Guruprasath | AI, Data Science & Software Developer Portfolio">
-  <meta name="twitter:description" content="Explore the portfolio of Guruprasath: projects, skills, photos, and a custom interactive anti-gravity particle experience.">
-  <meta name="twitter:image" content="images/profile-cutout.png">
-
-  <!-- Favicon -->
   <link rel="icon" type="image/png" href="favicon/favicon.png">
-
-  <!-- Custom Styles -->
   <link rel="stylesheet" href="style.css">
-
-  <!-- Google Fonts Preconnect and Load -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
-
-  <!-- JSON-LD Structured Data -->
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@graph": [
-      {
-        "@type": "Person",
-        "@id": "https://github.com/AMGURU2007/#person",
-        "name": "Guruprasath A M",
-        "jobTitle": "AI & Data Science Student",
-        "url": "https://github.com/AMGURU2007",
-        "image": "images/profile-cutout.png",
-        "description": "B.Sc Computer Science student specializing in Artificial Intelligence, Data Science, and Machine Learning. Passionate about building intelligent systems, automation, and IoT projects.",
-        "sameAs": [
-          "https://www.instagram.com/am.guruprasath2007/",
-          "https://www.linkedin.com/in/a-m-guruprasath-907776337?utm_source=share_via&utm_content=profile&utm_medium=member_android",
-          "https://github.com/AMGURU2007"
-        ]
-      },
-      {
-        "@type": "WebSite",
-        "@id": "https://github.com/AMGURU2007/#website",
-        "url": "https://github.com/AMGURU2007",
-        "name": "Guruprasath A M Portfolio",
-        "publisher": {
-          "@id": "https://github.com/AMGURU2007/#person"
-        }
-      },
-      {
-        "@type": "ProfilePage",
-        "@id": "https://github.com/AMGURU2007/#profile",
-        "url": "https://github.com/AMGURU2007",
-        "name": "Guruprasath's Developer Profile",
-        "about": {
-          "@id": "https://github.com/AMGURU2007/#person"
-        }
-      }
-    ]
-  }
-  </script>
 </head>
 <body>
 
-  <!-- Premium White Boxed Site Container Wrapper -->
+  <!-- First-Time Page Load Welcome Animation -->
+  <div id="welcome-loader" class="welcome-loader" aria-hidden="true">
+    <div class="welcome-box">
+      <span class="welcome-tag">PORTFOLIO // 2026</span>
+      <h2 class="welcome-title">GURUPRASATH A M</h2>
+      <div class="welcome-bar"><div class="welcome-fill"></div></div>
+    </div>
+  </div>
+
   <div class="boxed-site-container">
     <div class="portfolio-fluid-layer" aria-hidden="true">
       <canvas id="portfolio-fluid-canvas" class="portfolio-fluid-canvas"></canvas>
     </div>
 
-    <!-- Sticky Floating Navigation Bar inside Boxed Container -->
+    <!-- Sticky Navbar -->
     <header class="navbar-header">
       <div class="nav-container">
-        <a href="#home" class="nav-logo magnetic-element" aria-label="GURUPRASATH A M Home">
-          <strong>GURUPRASATH A M</strong>
-        </a>
-        
-        <!-- Desktop Navigation Menu -->
+        <a href="#home" class="nav-logo magnetic-element"><strong>GURUPRASATH A M</strong></a>
         <nav class="nav-menu" aria-label="Main Navigation">
           <a href="#home" class="nav-link active magnetic-element">Home</a>
           <a href="#about" class="nav-link magnetic-element">About</a>
+          <a href="#inspired-words" class="nav-link magnetic-element">Quotes</a>
           <a href="#skills" class="nav-link magnetic-element">Skills</a>
           <a href="#projects" class="nav-link magnetic-element">Projects</a>
+          <a href="#journey" class="nav-link magnetic-element">Journey</a>
+          <a href="#certificates" class="nav-link magnetic-element">Certificates</a>
+          <a href="#gallery" class="nav-link magnetic-element">Photo Gallery</a>
           <a href="#contact" class="nav-link magnetic-element">Contact</a>
         </nav>
-
-        <!-- Mobile Navigation Toggle Menu Button -->
         <button class="mobile-toggle" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="mobile-menu">
-          <span class="burger-bar"></span>
-          <span class="burger-bar"></span>
-          <span class="burger-bar"></span>
+          <span class="burger-bar"></span><span class="burger-bar"></span><span class="burger-bar"></span>
         </button>
       </div>
     </header>
 
-    <!-- Mobile Overlay Navigation Menu Panel -->
+    <!-- Mobile Menu -->
     <div class="mobile-menu-overlay" id="mobile-menu" aria-hidden="true">
       <nav class="mobile-nav" aria-label="Mobile Navigation">
         <ul class="mobile-nav-list">
           <li><a href="#home" class="mobile-nav-link">Home</a></li>
           <li><a href="#about" class="mobile-nav-link">About</a></li>
+          <li><a href="#inspired-words" class="mobile-nav-link">Inspired Words</a></li>
           <li><a href="#skills" class="mobile-nav-link">Skills</a></li>
           <li><a href="#projects" class="mobile-nav-link">Projects</a></li>
+          <li><a href="#journey" class="mobile-nav-link">Journey</a></li>
+          <li><a href="#certificates" class="mobile-nav-link">Certificates</a></li>
+          <li><a href="#gallery" class="mobile-nav-link">Photo Gallery</a></li>
           <li><a href="#contact" class="mobile-nav-link">Contact</a></li>
         </ul>
       </nav>
     </div>
 
-    <!-- Main Website Content inside Boxed Layout -->
     <main>
-      
-      <!-- Hero / Premium Reference Visual Hero Section -->
+      <!-- Hero Section -->
       <section id="home" class="hero-section">
         <canvas id="particle-canvas" aria-hidden="true"></canvas>
         <div class="hero-layout-grid">
-          
-          <!-- Left-side introduction text -->
           <div class="hero-text-content">
             <h1 class="hero-heading">
-              <span class="greet-text">Hi,</span><br>
-              <span class="intro-text">I'm <span class="highlight-blue" id="hero-name">GURUPRASATH A M</span></span><br>
+              <span class="greet-text prox-word">Hi,</span><br>
+              <span class="intro-text"><span class="prox-word">I'm</span> <span class="highlight-blue" id="hero-name">GURUPRASATH A M</span></span><br>
               <span class="study-text" id="hero-study">Computer Science Student | Exploring AI & Data Science to Build Intelligent Solutions.</span>
             </h1>
-            
-            <!-- Let's Connect CTA Button -->
             <div class="hero-cta-wrapper">
               <a href="#contact" class="btn btn-primary cta-connect-btn magnetic-element" id="cta-connect">
                 Let's Connect <span class="btn-arrow">&rarr;</span>
               </a>
             </div>
-
-          
-            <!-- Social Media Icons Area -->
-            <div class="social-icons-wrapper" id="hero-social-cards" role="group" aria-label="Social Profiles">
-              <!-- Dynamically generated custom compact social icons -->
-            </div>
+            <div class="social-icons-wrapper" id="hero-social-cards" role="group" aria-label="Social Profiles"></div>
           </div>
 
-          <!-- Right-side portrait image with organic CSS blob shape behind -->
           <div class="hero-portrait-content">
             <div class="portrait-wrapper magnetic-element">
               <div class="profile-blob-bg"></div>
               <img id="profile-img" src="images/profile-cutout.png" alt="Guruprasath Portrait" class="profile-image">
             </div>
           </div>
-          
         </div>
 
-        <!-- Scroll down indicator -->
         <div class="scroll-indicator-container">
-          <a href="#about" class="scroll-down-arrow-link magnetic-element" aria-label="Scroll to About Section">
-            <span class="scroll-text">Explore My Work</span>
+          <a href="#about" class="scroll-down-arrow-link magnetic-element">
+            <span class="scroll-text prox-word">Explore My Work</span>
             <span class="scroll-arrow" aria-hidden="true">↓</span>
           </a>
         </div>
       </section>
 
-      <!-- About Me Section (2-Column layout) -->
+      <!-- About Me Section -->
       <section id="about" class="section-container reveal-on-scroll">
         <div class="section-header">
           <span class="section-pretitle">Who I Am</span>
           <h2 class="section-title">About Me</h2>
           <div class="title-underline"></div>
         </div>
-        
         <div class="about-two-column-grid">
           <div class="about-left-text glass-panel">
             <h3 class="about-intro-heading">Introduction</h3>
             <p id="about-intro-text">Loading...</p>
-            <div class="credentials-badge-box" id="about-credentials-box">
-              <!-- Injected by script.js -->
-            </div>
+            <div class="credentials-badge-box" id="about-credentials-box"></div>
           </div>
-          
           <div class="about-right-cards">
             <div class="about-card glass-panel highlight-border-blue">
               <div class="card-icon" aria-hidden="true">🎓</div>
               <h3>Education</h3>
               <p id="about-education-text">Loading...</p>
             </div>
-            
             <div class="about-card glass-panel highlight-border-red">
               <div class="card-icon" aria-hidden="true">🚀</div>
               <h3>Interests</h3>
               <p id="about-interests-text">Loading...</p>
             </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Inspired Words Section (Moved ABOVE Vision & Mission) -->
+      <section id="inspired-words" class="section-container inspired-words-section reveal-on-scroll">
+        <div class="section-header">
+          <span class="section-pretitle">Ideas That Move Me</span>
+          <h2 class="section-title">Inspired Words</h2>
+          <div class="title-underline"></div>
+        </div>
+        <div class="quote-carousel glass-panel" aria-roledescription="carousel" aria-label="Inspirational quotes">
+          <div class="quote-stage" id="quote-stage" aria-live="polite">
+            <span class="quote-language" id="quote-language"></span>
+            <p class="quote-context" id="quote-context"></p>
+            <blockquote id="quote-text"></blockquote>
+            <cite id="quote-author"></cite>
+          </div>
+          <div class="quote-carousel-controls">
+            <button id="quote-previous" class="quote-nav-button" type="button" aria-label="Previous quote">&larr;</button>
+            <div id="quote-indicators" class="quote-indicators" aria-label="Quote selection"></div>
+            <button id="quote-next" class="quote-nav-button" type="button" aria-label="Next quote">&rarr;</button>
           </div>
         </div>
       </section>
@@ -214,7 +166,6 @@
           <h2 class="section-title">Vision &amp; Mission</h2>
           <div class="title-underline"></div>
         </div>
-
         <div class="vision-mission-grid">
           <article class="vision-mission-card vision-card glass-panel highlight-border-blue">
             <span class="vision-mission-label">Vision</span>
@@ -222,53 +173,13 @@
             <p>To build an ecosystem of students who create meaningful change in their city, their state, and ultimately their country.</p>
             <p>Our knowledge should first strengthen the environment around us and create opportunities for the society we belong to.</p>
           </article>
-
           <div class="vision-mission-connection" aria-hidden="true"></div>
-
           <article class="vision-mission-card mission-card glass-panel highlight-border-green">
             <span class="vision-mission-label">Mission</span>
             <h3>Learn continuously. Solve real problems. Build for society. Grow together.</h3>
             <p>To learn continuously, build practical solutions, and use technology to solve real problems in our communities.</p>
             <p>When we work for the growth of society, our own growth follows.</p>
           </article>
-        </div>
-      </section>
-
-      <!-- Inspired Words Section -->
-      <section id="inspired-words" class="section-container inspired-words-section reveal-on-scroll">
-        <div class="section-header">
-          <span class="section-pretitle">Ideas That Move Me</span>
-          <h2 class="section-title">Inspired Words</h2>
-          <div class="title-underline"></div>
-        </div>
-
-        <div class="quote-carousel glass-panel" aria-roledescription="carousel" aria-label="Inspirational quotes">
-          <div class="quote-stage" id="quote-stage" aria-live="polite">
-            <span class="quote-language" id="quote-language"></span>
-            <p class="quote-context" id="quote-context"></p>
-            <blockquote id="quote-text"></blockquote>
-            <cite id="quote-author"></cite>
-          </div>
-
-          <div class="quote-carousel-controls">
-            <button id="quote-previous" class="quote-nav-button" type="button" aria-label="Previous quote">&larr;</button>
-            <div id="quote-indicators" class="quote-indicators" aria-label="Quote selection"></div>
-            <button id="quote-next" class="quote-nav-button" type="button" aria-label="Next quote">&rarr;</button>
-          </div>
-        </div>
-      </section>
-
-      <!-- Photo Gallery Section -->
-      <section id="photos" class="section-container reveal-on-scroll">
-        <div class="section-header">
-          <span class="section-pretitle">Life & Activities</span>
-          <h2 class="section-title">Photo Gallery</h2>
-          <div class="title-underline"></div>
-        </div>
-
-        <!-- Dynamic Photo Grid -->
-        <div class="gallery-grid-wrapper" id="gallery-grid">
-          <!-- Photo grid items generated dynamically -->
         </div>
       </section>
 
@@ -279,11 +190,7 @@
           <h2 class="section-title">Skills & Technologies</h2>
           <div class="title-underline"></div>
         </div>
-
-        <!-- Dynamic Skills Categories -->
-        <div class="skills-layout-grid" id="skills-grid">
-          <!-- Skill groups generated dynamically -->
-        </div>
+        <div class="skills-layout-grid" id="skills-grid"></div>
       </section>
 
       <!-- Projects Section -->
@@ -293,14 +200,53 @@
           <h2 class="section-title">Projects</h2>
           <div class="title-underline"></div>
         </div>
-
-        <!-- Dynamic Projects Cards -->
-        <div class="projects-layout-grid" id="projects-grid">
-          <!-- Project cards generated dynamically -->
-        </div>
+        <div class="projects-layout-grid" id="projects-grid"></div>
       </section>
 
-      <!-- Contact / CTA Section -->
+      <!-- Redesigned Journey Section -->
+      <section id="journey" class="section-container reveal-on-scroll">
+        <div class="section-header">
+          <span class="section-pretitle">Progress, not perfection</span>
+          <h2 class="section-title">My Journey</h2>
+          <div class="title-underline"></div>
+          <p class="section-description">A growing roadmap of learning, building, teamwork, and milestones.</p>
+        </div>
+        <div class="journey-timeline" id="journey-timeline"></div>
+      </section>
+
+      <!-- Certificates Section -->
+      <section id="certificates" class="section-container reveal-on-scroll">
+        <div class="section-header">
+          <span class="section-pretitle">Learning & recognition</span>
+          <h2 class="section-title">Certificates</h2>
+          <div class="title-underline"></div>
+          <p class="section-description">Courses, technical learning, participation, and achievements in one place.</p>
+        </div>
+        <div class="gallery-toolbar">
+          <input id="certificate-search" type="search" placeholder="Search certificates..." aria-label="Search certificates">
+          <select id="certificate-filter" aria-label="Filter certificates">
+            <option value="all">All certificates</option>
+            <option value="Technical">Technical</option>
+            <option value="Achievement">Achievements</option>
+            <option value="Participation">Participation</option>
+            <option value="Learning">Learning</option>
+          </select>
+        </div>
+        <div class="certificate-grid" id="certificate-grid"></div>
+      </section>
+
+      <!-- Unified Photo Gallery (Renamed from Event Gallery) -->
+      <section id="gallery" class="section-container reveal-on-scroll">
+        <div class="section-header">
+          <span class="section-pretitle">Moments, Activities & Memories</span>
+          <h2 class="section-title">Photo Gallery</h2>
+          <div class="title-underline"></div>
+          <p class="section-description">Hackathons, project prototypes, college events, workshops, and memorable moments.</p>
+        </div>
+        <div class="event-gallery-grid" id="event-gallery-grid"></div>
+      </section>
+
+      <!-- Contact Section -->
       <section id="contact" class="section-container reveal-on-scroll">
         <div class="contact-glass-card glass-panel highlight-border-blue">
           <div class="contact-card-content">
@@ -310,65 +256,32 @@
             <p class="contact-description">
               I am always open to discussing new projects, machine learning pipeline ideas, or web application integrations. Feel free to contact me via email, phone, or social profiles!
             </p>
-
-            <!-- Large Contact Target Buttons -->
-            <div class="contact-buttons-wrapper" id="contact-buttons-container">
-              <!-- Contact buttons loaded from JavaScript -->
-            </div>
+            <div class="contact-buttons-wrapper" id="contact-buttons-container"></div>
           </div>
         </div>
       </section>
-
     </main>
 
-    <!-- Accessibility-friendly Footer -->
+    <!-- Footer -->
     <footer class="footer-wrapper">
       <div class="footer-content">
         <p class="copyright-line">&copy; <span id="footer-year">2026</span> <strong id="footer-name-strong">Guruprasath</strong>. All Rights Reserved.</p>
         <p class="credit-line">Premium Portfolio • Designed with HTML5 • CSS3 • Vanilla Javascript</p>
-
-        <!-- Public visitor counter: works on static GitHub Pages without a custom backend. -->
         <div class="visitor-counter" aria-label="Portfolio visitor counter">
           <span class="visitor-counter-label"><span class="visitor-counter-dot" aria-hidden="true"></span> TOTAL PORTFOLIO VISITS</span>
-          <img
-            class="visitor-counter-badge"
-            src="https://visitor-badge.laobi.icu/badge?page_id=amguru2007.GURUPRASATH-A-M&left_color=%230F172A&right_color=%231A5AC2&left_text=visits"
-            alt="Portfolio visit count"
-            loading="lazy"
-            referrerpolicy="strict-origin-when-cross-origin"
-          >
+          <img class="visitor-counter-badge" src="https://visitor-badge.laobi.icu/badge?page_id=amguru2007.GURUPRASATH-A-M&left_color=%230F172A&right_color=%231A5AC2&left_text=visits" alt="Portfolio visit count" loading="lazy" referrerpolicy="strict-origin-when-cross-origin">
         </div>
       </div>
     </footer>
-
-  </div> <!-- End of Boxed Container -->
-
-  <!-- Fullscreen Lightbox Dialog (Keyboard & Swipe navigation ready) -->
-  <div id="lightbox-modal" class="lightbox-wrapper" aria-hidden="true" role="dialog" aria-label="Image viewing mode">
-    <button id="lightbox-close-btn" class="lightbox-close-btn" aria-label="Close image viewing mode">&times;</button>
-    
-    <button id="lightbox-prev-btn" class="lightbox-nav-btn prev-btn" aria-label="View previous image" type="button">
-      <span class="nav-arrow" aria-hidden="true">&#9001;</span>
-    </button>
-    
-    <div class="lightbox-image-container">
-      <img id="lightbox-image" src="" alt="" class="lightbox-image-element">
-      <div id="lightbox-caption-text" class="lightbox-caption-element"></div>
-    </div>
-    
-    <button id="lightbox-next-btn" class="lightbox-nav-btn next-btn" aria-label="View next image" type="button">
-      <span class="nav-arrow" aria-hidden="true">&#9002;</span>
-    </button>
   </div>
 
-  <!-- Back to Top Button -->
   <button id="back-to-top" class="back-to-top-btn magnetic-element" aria-label="Back to top" type="button">&uarr;</button>
 
-  <!-- Premium Custom Cursor Follower (Enabled on desktop hover pointer capability) -->
+  <!-- Upgraded Multi-Color Glow Cursor -->
   <div class="custom-cursor-dot" id="cursor-dot"></div>
   <div class="custom-cursor-follower" id="cursor-follower"></div>
 
-  <!-- Custom Portfolio Logic -->
+  <script src="content.js" defer></script>
   <script src="script.js" defer></script>
 </body>
 </html>
