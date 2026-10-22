@@ -2,9 +2,13 @@
 
 const portfolioConfig = {
   name: "GURUPRASATH A M",
-  study: "Computer Science Student | Exploring AI & Data Science to Build Intelligent Solutions.",
-  // Add your 2-3 hero portrait photos here; they will automatically animate at the exact same size!
- heroPhotos: [
+  // Study titles that will loop with the running typing animation
+  studyTitles: [
+    "Computer Science Student | Exploring AI & Data Science to Build Intelligent Solutions.",
+    "Aspiring Software Developer & Machine Learning Enthusiast.",
+    "IoT & Embedded Systems Designer | Building Smart Solutions."
+  ],
+  heroPhotos: [
     "images/profile-cutout.png",
     "images/profile-cutout-1.png",
     "images/profile-cutout-2.png",
@@ -58,11 +62,11 @@ const svgIcons = {
 const $ = (id) => document.getElementById(id);
 
 document.addEventListener('DOMContentLoaded', () => {
-  // First-time Welcome Animation Dismissal
   setTimeout(() => $('welcome-loader')?.classList.add('hide'), 1150);
 
   $('hero-name').textContent = portfolioConfig.name;
-  $('hero-study').textContent = portfolioConfig.study;
+  initTypingEffect();
+  
   $('profile-img').src = portfolioConfig.heroPhotos[0];$('footer-name-strong').textContent = portfolioConfig.name;
   $('footer-year').textContent = new Date().getFullYear();$('about-intro-text').textContent = portfolioConfig.about.intro;
   $('about-education-text').textContent = portfolioConfig.about.education;
@@ -106,9 +110,40 @@ document.addEventListener('DOMContentLoaded', () => {
   initQuoteCarousel();
 });
 
-/* Split ALL titles, hero name, headings & text into multi-color interactive words */
+/* Running text / Typing effect for hero study title */
+function initTypingEffect() {
+  const el = $('hero-study');
+  if (!el) return;
+  const titles = portfolioConfig.studyTitles;
+  let titleIdx = 0, charIdx = 0, isDeleting = false;
+
+  function type() {
+    const current = titles[titleIdx];
+    if (isDeleting) {
+      el.textContent = current.substring(0, charIdx - 1);
+      charIdx--;
+    } else {
+      el.textContent = current.substring(0, charIdx + 1);
+      charIdx++;
+    }
+
+    let speed = isDeleting ? 35 : 70;
+    if (!isDeleting && charIdx === current.length) {
+      speed = 2200; // Pause at full sentence
+      isDeleting = true;
+    } else if (isDeleting && charIdx === 0) {
+      isDeleting = false;
+      titleIdx = (titleIdx + 1) % titles.length;
+      speed = 400;
+    }
+    setTimeout(type, speed);
+  }
+  type();
+}
+
+/* Split titles and descriptions into interactive words */
 function initAllTextColorSplitting() {
-  const targets = document.querySelectorAll('#hero-name, #hero-study, .section-pretitle, .section-title, .about-intro-heading, .about-card h3, .vision-mission-card h3, .skills-category-title, .project-card-title, .journey-card h3, .contact-title, .about-left-text p, .about-card p, .vision-mission-card p, .project-card-desc, .journey-card p, .contact-description');
+  const targets = document.querySelectorAll('#hero-name, .section-pretitle, .section-title, .about-intro-heading, .about-card h3, .vision-mission-card h3, .skills-category-title, .project-card-title, .journey-card h3, .contact-title, .about-left-text p, .about-card p, .vision-mission-card p, .project-card-desc, .journey-card p, .contact-description');
   let colorCounter = 0;
   targets.forEach(el => {
     const words = el.textContent.trim().split(/\s+/);
@@ -119,8 +154,7 @@ function initAllTextColorSplitting() {
   });
 }
 
-/* Multi-Photo Hero Rotation at Uniform Size */
-/* Multi-Photo Hero Rotation at Uniform Size */
+/* Multi-Photo Hero Rotation */
 function initHeroPhotoSwitcher() {
   const img = $('profile-img'), photos = portfolioConfig.heroPhotos;
   if (!img || !photos || photos.length <= 1) return;
@@ -133,10 +167,10 @@ function initHeroPhotoSwitcher() {
       img.onload = () => img.classList.remove('photo-switch-out');
       setTimeout(() => img.classList.remove('photo-switch-out'), 120);
     }, 420);
-  }, 5500); 
+  }, 5500);
 }
 
-/* Fast Inspired Words Carousel with Auto Tamil-to-English Translation */
+/* Fast Inspired Words Carousel */
 function initQuoteCarousel() {
   const stage = $('quote-stage'), lang =$('quote-language'), text = $('quote-text'), auth =$('quote-author'), ctx = $('quote-context'), inds =$('quote-indicators'), quotes = portfolioConfig.quotes;
   if (!stage || !quotes.length) return;
@@ -178,7 +212,7 @@ function initQuoteCarousel() {
   setContent(0, false); runCycle();
 }
 
-/* Staggered Scroll Reveal Animations */
+/* Staggered Scroll Animations */
 function initScrollAnimations() {
   const sections = document.querySelectorAll('section'), navLinks = document.querySelectorAll('.nav-link');
   document.querySelectorAll('.about-card, .vision-mission-card, .journey-item, .certificate-card, .event-photo-card').forEach((el, i) => {
@@ -202,7 +236,7 @@ function initScrollAnimations() {
   sections.forEach(s => navObs.observe(s));
 }
 
-/* All-Device Cursor & Touch Proximity Multi-Color Text Engine */
+/* Cursor & Touch Effects */
 function initAllDeviceCursorAndTextFX() {
   const dot = $('cursor-dot'), follower =$('cursor-follower');
   let px = -999, py = -999, fx = 0, fy = 0, pointerActive = false, hue = 220;
@@ -251,7 +285,7 @@ function initAllDeviceCursorAndTextFX() {
   animate();
 }
 
-/* Mobile Nav & Back to Top */
+/* Mobile Nav & Back To Top */
 function initMobileNavAndBackToTop() {
   const toggleBtn = document.querySelector('.mobile-toggle'), menu = $('mobile-menu'), header = document.querySelector('.navbar-header'), btt =$('back-to-top');
   const toggle = () => {
@@ -269,7 +303,7 @@ function initMobileNavAndBackToTop() {
   btt?.addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smooth' }));
 }
 
-/* Hero Particle System */
+/* Particle System */
 function initParticleSystem() {
   const canvas = $('particle-canvas'), hero = canvas?.closest('.hero-section');
   if (!canvas || !hero) return;
@@ -287,7 +321,7 @@ function initParticleSystem() {
   })();
 }
 
-/* Redesigned Journey, Certificates & Unified Photo Gallery */
+/* Journey, Certificates & Photo Gallery Loaders */
 function initPortfolioAdditions() {
   const data = window.PORTFOLIO_CONTENT || { journey: [], certificates: [], events: [] };
   const esc = v => String(v ?? '').replace(/[&<>"']/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]));
@@ -315,7 +349,6 @@ function initPortfolioAdditions() {
   };
   search?.addEventListener('input', renderCerts); filter?.addEventListener('change', renderCerts); renderCerts();
 
-  // Merge initial photos + event photos into the single unified Photo Gallery
   const allPhotos = [...portfolioConfig.photos, ...(data.events || [])];
   if (eventGrid) {
     eventGrid.innerHTML = allPhotos.map((e, i) => `
